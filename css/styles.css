@@ -167,8 +167,11 @@ a:hover {
 
 .smallcaps {
     font-variant: small-caps;
+    color: #2b2b2b;
     letter-spacing: .6px;
     opacity: .9;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .cta-row {
@@ -245,7 +248,7 @@ a:hover {
 }
 
 .panel-img.round {
-    border-radius: 50%;
+    
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -434,4 +437,11 @@ button {
 #rose .cta-row .btn {
     min-width: 220px;
     text-align: center;
+}
+
+#IceCreams {
+ 
+    padding: 1.2rem 2rem;
+    text-align: center;
+    border-radius: 12px;
 }
