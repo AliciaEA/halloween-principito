@@ -54,6 +54,17 @@ a:hover {
 .brand {
     letter-spacing: .5px;
 }
+#halloween-toggle {
+    margin-left: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #bdad8a;
+    color: #583e0d;
+    border: none;
+   
+    font-weight: 600;
+    transition: #444 .25s, #bdad8a .25s, #583e0d .25s;
+}
 
 .nav {
     background-color: #cec5b6;
@@ -160,6 +171,12 @@ a:hover {
 
 }
 
+#secret-halloween {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
 .lead {
     font-size: 1.15rem;
     color: rgb(228, 224, 204);
@@ -221,7 +238,7 @@ a:hover {
 }
 
 .p3 {
-    color: var(--cream);
+    color:  #805711;
     border-left: 4px solid var(--rose);
     padding-left: 12px;
 }
@@ -294,7 +311,14 @@ a:hover {
 #quotes h2 {
     margin-bottom: 4rem;
 }
-
+#pumpkin-img{
+   display: block;
+   
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto -9rem;
+    
+}
 #quote-img {
     display: block;
     /* centra horizontalmente */
@@ -317,7 +341,7 @@ a:hover {
     padding: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     transition: transform .18s ease, box-shadow .18s ease;
-    cursor: default;
+    
 }
 
 .card:hover {
@@ -371,7 +395,7 @@ a:hover {
     align-items:center;
     justify-content:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.18);
-    cursor:pointer;
+    
     z-index:1200;
     transition: transform .35s cubic-bezier(.2,.8,.2,1);
 }

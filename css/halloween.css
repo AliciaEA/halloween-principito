@@ -1,0 +1,122 @@
+:root{
+    --background-color: #292828;
+    --text-color: #fdb927;
+    --primary-color: #ff4500;
+    --card-color-bg: #2e0804;
+    --border-color: #ff4500;
+}
+
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>") 16 0,auto; 
+}
+
+
+h1,h2,h3{
+    color: var(--primary-color);
+    text-shadow: 0 0 5px rgba(255, 69, 0, 0.8);
+}
+a{
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color);
+}
+#secret-halloween {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: inline;
+}
+.card{
+    background-color: #682a06;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+    
+    
+}
+
+.card .quote{
+    color: rgb(221, 164, 118);
+}
+
+.card .attrib{
+    color: rgb(221, 133, 51);
+}
+.nav a{
+    color: var(--text-color);
+}
+.nav a:hover{
+    background-color: #8f7676;
+    color: var(--card-color-bg);
+    padding: 16px 12px;
+    margin: 0;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👻</text></svg>") 16 0,auto; 
+}
+#halloween-toggle{
+    background-color: var(--primary-color);
+    color: var(--card-color-bg);
+    border: 2px solid var(--text-color);
+    
+}
+#halloween-toggle:hover{
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👻</text></svg>") 16 0,auto; 
+}
+a:hover{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👻</text></svg>") 16 0,auto; 
+}
+
+#pumpkin-img{
+   display: block;
+   
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto -9rem;
+    
+}
+.icon{
+    animation: pumpkin-spin 1s infinite alternate;
+}
+
+@keyframes pumpkin-spin {
+    from {
+        transform: rotate(-10deg) scale(1);
+    }
+    to {
+        transform: rotate(10deg) scale(1.05);
+    }
+}
+
+.nav{
+    background-color: #1c1c1c;
+    
+}
+
+.subtitle{
+    color: rgb(228, 155, 137);
+}
+.lead{
+    color: rgb(228, 207, 204);
+}
+.btn{
+    background: #ce8169;
+    color: var(--card-color-bg);
+}
+.btn:hover{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👻</text></svg>") 16 0,auto; 
+}
+
+#quotes{
+    background-color: var(--card-color-bg);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+}
+
+.site-footer{
+    background-color: #1c1c1c;
+    border-top: 2px solid var(--border-color);
+}

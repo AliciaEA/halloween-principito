@@ -7,6 +7,7 @@
     <title>Asteroid B-612</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/halloween.css" id="halloween-stylesheet" disabled> 
 </head>
 
 <body>
@@ -17,11 +18,19 @@
                 <a href="index.html">Home</a>
                 <a href="asteroide-b612.html">Asteroid B-612</a>
                 <a href="constelaciones.html">Constellations</a>
+                <a href="halloween.html" id="secret-halloween">Halloween</a>
+                
             </nav>
         </div>
     </header>
 
 <main class="container">
+    <div class="toggle-container">
+            <button id="halloween-toggle" class="toggle-button" onclick="toggleTheme()">
+                <span class="icon" style="font-size: 1.26rem;">🎃</span>
+                <span>Halloween Theme</span>
+            </button>
+        </div>
     <h1>404</h1>
     <h1>Lost Among the Stars</h1>
     <img src="assets/favicon.png" alt="Osito en una luna" loading="lazy" >

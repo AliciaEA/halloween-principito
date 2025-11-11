@@ -1,9 +1,9 @@
-// Magic button script (externalized)
-(function(){
+// Magic button script 
+(function () {
     const btn = document.getElementById('magic-btn');
-    if(!btn) return;
+    if (!btn) return;
 
-    function spawnParticle(char){
+    function spawnParticle(char) {
         const el = document.createElement('div');
         el.className = 'magic-particle fall';
         // choose size
@@ -19,25 +19,25 @@
         el.style.animationDuration = dur;
         el.style.animationDelay = delay;
         // improved, more visible color palette
-        const colors = ['#8a6a09ff','#ffc107','#c5d81cff','#ccc912ff','#ffee04ff','#ffb74d'];
+        const colors = ['#8a6a09ff', '#ffc107', '#c5d81cff', '#ccc912ff', '#ffee04ff', '#ffb74d'];
         el.style.color = colors[Math.floor(Math.random() * colors.length)];
         document.body.appendChild(el);
         // remove after animation ends
         el.addEventListener('animationend', () => el.remove());
     }
 
-    function burst(){
-        const chars = ['★','✦','✹','✸','✷'];
+    function burst() {
+        const chars = ['★', '✦', '✹', '✸', '✷'];
         const count = 40; // slightly fewer but more visible
-        for(let i=0;i<count;i++){
-            setTimeout(()=>{
-                const ch = chars[Math.floor(Math.random()*chars.length)];
+        for (let i = 0; i < count; i++) {
+            setTimeout(() => {
+                const ch = chars[Math.floor(Math.random() * chars.length)];
                 spawnParticle(ch);
             }, i * 45);
         }
     }
 
-    btn.addEventListener('click', function(){
+    btn.addEventListener('click', function () {
         // rotate button briefly
         btn.classList.remove('magic-spin');
         // force reflow to restart animation
@@ -48,8 +48,41 @@
     });
 
     // touch support: same as click
-    btn.addEventListener('touchstart', function(e){
+    btn.addEventListener('touchstart', function (e) {
         e.preventDefault();
         btn.click();
-    }, {passive:false});
+    }, { passive: false });
 })();
+
+// Halloween theme toggle 
+
+const halloweenStylesheet = document.getElementById('halloween-stylesheet');
+const THEME_KEY = 'halloween-theme-enabled';
+
+function initializeThemeHall() {
+
+    const isHalloween = localStorage.getItem(THEME_KEY) === 'true';
+    if (halloweenStylesheet) {
+        halloweenStylesheet.disabled = !isHalloween;
+        if (isHalloween) {
+            // add class to both documentElement and body so styles that depend on either work
+            document.documentElement.classList.add('theme-active');
+            if (document.body) document.body.classList.add('theme-active');
+        }
+    }
+
+}
+
+function toggleTheme() {
+    if (!halloweenStylesheet) return;
+    const currentState = halloweenStylesheet.disabled;
+    halloweenStylesheet.disabled = !currentState;
+    const isHalloweenNow = !currentState;
+    // toggle class on root and body for consistency
+    document.documentElement.classList.toggle('theme-active', isHalloweenNow);
+    if (document.body) document.body.classList.toggle('theme-active', isHalloweenNow);
+    console.log('toggleTheme: halloweenStylesheet exists?', !!halloweenStylesheet, 'now enabled?', isHalloweenNow);
+    localStorage.setItem(THEME_KEY, String(isHalloweenNow));
+}
+
+document.addEventListener('DOMContentLoaded', initializeThemeHall);
