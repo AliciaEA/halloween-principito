@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Principito</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/halloween.css" id="halloween-stylesheet">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('halloween-theme-enabled') === 'true') {
+                    // ensure the halloween stylesheet is enabled early
+                    var link = document.getElementById('halloween-stylesheet');
+                    if (link) link.disabled = false;
+                    document.documentElement.classList.add('theme-active');
+                }
+            } catch (e) { }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="brand">El Principito</h1>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="asteroide-b612.html">Asteroid B-612</a>
+                <a href="constelaciones.html">Constellations</a>
+                <a href="halloween.html" id="secret-halloween">Halloween</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="toggle-container">
+            <button id="halloween-toggle" class="toggle-button" onclick="toggleTheme()">
+                <span class="icon" style="font-size: 1.26rem;">🎃</span>
+                <span>Halloween Theme</span>
+            </button>
+        </div>
+
+        <section class="container">
+            <h2>Halloween Special</h2>
+            <article class="card">
+                <h3>The Enchanted Asteroid B-612</h3>
+                <p class="quote">On Halloween night, Asteroid B-612 transforms into a magical realm where the little
+                    prince and his
+                    friends celebrate under a sky filled with glowing jack-o'-lanterns and twinkling stars. The rose
+                    blooms with a mysterious light, and the fox shares tales of enchanted forests and playful spirits.
+                </p>
+                <p class="attrib">Join the little prince as he discovers the true magic of friendship and love in this
+                    special Halloween
+                    adventure.</p>
+
+            </article>
+        </section>
+        <img id="pumpkin-img" src="assets/pumpkin.png" alt="Pumpkin Halloween decorations" loading="lazy">
+
+        <section id="quotes" class="container">
+            <p>That night, the little prince visited a planet that was not drawn on any map. A planet where pumpkins glowed instead of stars and the wind whispered secrets the stories of those who once loved</p>
+
+            <p class="lead">"Why are the stars sleeping tonight? The Little Prince asked <br>
+                "Because even the light must rest", said the fox., sitting beside a small jack-o'-lantern.<br>
+            "But the heart - "The heart never sleeps, it only dreams."<br>
+        The little prince smiled softly. "Then maybe the stars are dreaming of us"</p>
+        <p >
+            And when the weird moon rose above the dark planet, he understood that even te shadows have beauty - if you learn with your heart
+
+        </p>
+
+        <p >
+            What is essential is hidden inside the lantern
+        </p>
+
+        </section>
+
+        <section class="container">
+            <h2>Halloween Goodbye bye!</h2>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>El Principito — Swirl YSWS</p>
+        <p>
+            <a href="https://github.com/AliciaEA/el-principito" target="_blank">GitHub</a>
+        </p>
+        <a href="mailto:alicia.massiel.estrada.a@gmail.com">Email me: alicia.massiel.estrada.a@gmail.com</a>
+    </footer>
+
+
+    <button id="magic-btn" aria-label="Make it rain stars" title="Make it rain stars">★</button>
+    <script src="js/magic.js" defer></script>
+
+</body>
+
+</html>
